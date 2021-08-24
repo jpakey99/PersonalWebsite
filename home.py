@@ -16,7 +16,25 @@ def home():
 
 @app.route('/resume')
 def resume():
-    return render_template('resume.html')
+    summary = 'Software engineer with strong communication and teamwork skills along with an excellent technical background. Seeking an internship May 2022 - August 2022.'
+    education = {
+        "college": {
+            'name': 'Rochester Institute of Technology, Rochester, NY',
+            'finished': 'Expected Graduation Date: May 2023',
+            'type': 'Bachelor of Science: Software Engineering',
+            'classes': 'Classes taken: Computer Science 1 (Python) and 2 (Java), Intro to Software Engineering, Math Models of Software Engineering, '
+                       'Process and Project Management, Engineering of Software Subsystems, Engineering Secure Software, Human Centered Requirements and Design, '
+                       'Analysis of Algorithms, Design for Computing Systems, Linear Algebra, Calculus 1 and 2, Public Speaking, '
+                       'Intercultural Communications, Game Theory, Organizational Behavior.'
+            },
+        "high_school": {
+            'name': 'Gateway High School, Monroeville, PA',
+            'finished': 'Graduated May 2018',
+            'type': 'High School Diploma',
+            'classes': ''
+            }
+        }
+    return render_template('resume.html', summary=summary, education=education)
 
 
 def run():

@@ -8,6 +8,19 @@
         <a href="/">Home</a>
         <a class="active" href="resume">Resume</a>
         </div>
-        <h1><b>John Akey</b></h1>
+        <h1><b>Summary</b></h1>
+        <p>{{summary}}</p>
+        <h1><b>Education</b></h1>
+        {% for school in education %}
+            <h2><i>{{education[school].name}}</i></h2>
+            <p><i>{{education[school].finished}}<br>{{education[school].type}}</i><br>
+            {{education[school].classes}}
+            </p>
+
+        {% endfor %}
+        <h1><b>Projects</b></h1>
+        <h1><b>Skills</b></h1>
+        <h1><b>Work Experience</b></h1>
+        <h1><b>Extra-Curricular</b></h1>
   </body>
 </html>
